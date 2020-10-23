@@ -82,7 +82,7 @@ def delete_user():
       if request.form["id"]!="":
           
             lines=[]
-            with open('data.csv',encoding='utf8') as readFile:
+            with open('./data.csv',encoding='utf8') as readFile:
             
                 reader = csv.reader(readFile)
             
@@ -131,7 +131,7 @@ def update():
       if request.form["id"]!="":
           
             lines=[]
-            with open('data.csv',encoding='utf8') as readFile:
+            with open('./data.csv',encoding='utf8') as readFile:
             
                 reader = csv.reader(readFile)
             
@@ -149,7 +149,7 @@ def update():
                             row[(cols.index(column)+1)]=(row[(cols.index(column)+1)]+","+value+"]")
                         print("row",row)
                     lines.append(row)
-            with open('data.csv', 'w',encoding='utf8', newline='') as writeFile:
+            with open('./data.csv', 'w',encoding='utf8', newline='') as writeFile:
             
                 writer = csv.writer(writeFile)
             
@@ -180,7 +180,7 @@ def remove():
       if request.form["id"]!="":
             if column in cols2:
                 lines=[]
-                with open('data.csv',encoding='utf8') as readFile:
+                with open('./data.csv',encoding='utf8') as readFile:
                 
                     reader = csv.reader(readFile)
                 
@@ -197,7 +197,7 @@ def remove():
                                 row[(cols.index(column)+1)]=row[(cols.index(column)+1)].replace("[]","")
                             print("row",row)
                         lines.append(row)
-                with open('data.csv', 'w',encoding='utf8', newline='') as writeFile:
+                with open('./data.csv', 'w',encoding='utf8', newline='') as writeFile:
                 
                     writer = csv.writer(writeFile)
                 
