@@ -18,3 +18,4 @@ pickle-mixin
 pickle5
 gunicorn
 flask-cors
+python-csv
